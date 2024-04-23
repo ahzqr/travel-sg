@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
+import CarparkList from "./pages/CarparkList";
 export default function App() {
-  const [posts, setPosts] = useState([]);
+  const [carparkInfo, setCarparkInfo] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCarparkInfo = async () => {
       const response = await fetch(
         "https://api.data.gov.sg/v1/transport/carpark-availability"
       );
       const data = await response.json();
-      setPosts(data.items);
-      console.log(data.items);
+      setCarparkInfo(data.items[0].carpark_data);
     };
-    fetchData();
+    fetchCarparkInfo();
   }, []);
 
   return (
     <div>
-      <h2>{posts.carpark_info}</h2>
+      <h1>Carpark SG</h1>
+      <CarparkList carparkInfo={carparkInfo} />
     </div>
   );
 }
