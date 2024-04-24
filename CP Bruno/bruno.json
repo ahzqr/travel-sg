@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "CP Bruno",
+  "name": "Project Bruno",
   "type": "collection",
   "ignore": [
     "node_modules",
