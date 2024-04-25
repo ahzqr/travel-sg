@@ -91,11 +91,12 @@ export default function Communal() {
 
   return (
     <>
-      <h1>Share your Singapore Experience!</h1>
-      <form onSubmit={handleClick}>
-        <label>
+      <h1 className="communal-header">Share your Singapore Experience!</h1>
+      <hr/>
+      <form className="form-container" onSubmit={handleClick}>
+        <label className="form-label">
           Name:
-          <input
+          <input className="form-input"
             type="text"
             name="Name"
             value={comment.Name}
@@ -103,9 +104,9 @@ export default function Communal() {
           />
         </label>
         <br />
-        <label>
+        <label className="form-label">
           Trip Highlights:
-          <input
+          <input className="form-input"
             type="text"
             name="Highlights"
             value={comment.Highlights}
@@ -113,9 +114,9 @@ export default function Communal() {
           />
         </label>
         <br />
-        <label>
+        <label className="form-label">
           Itinerary:
-          <textarea
+          <textarea className="form-textarea"
             type="text"
             name="Itinerary"
             value={comment.Itinerary}
@@ -123,25 +124,24 @@ export default function Communal() {
           />
         </label>
         <br />
-        <label>
-          Highlight Photo:
-          <input type="file" />
-        </label>
-        <br />
-        <input type="submit" value="Share!" />
+        <input className="form-submit" type="submit" value="Share!" />
       </form>
       <hr />
-      {table.map((detail, index) => (
-        <Card key={index} style={{ width: "30rem" }}>
-          <Card.Body>
-            <Card.Title>{detail.fields.Name} ({detail.fields.Created})</Card.Title>
-            <Card.Subtitle>
-              <strong>{detail.fields.Highlights}</strong>
-            </Card.Subtitle>
-            <Card.Text>{detail.fields.Itinerary}</Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
+        {table.map((detail, index) => (
+          <Card key={index} style={{ width: "30rem" }}>
+            <Card.Body>
+              <Card.Title>
+                {detail.fields.Name} ({detail.fields.Created})
+              </Card.Title>
+              <Card.Subtitle>
+                <strong>{detail.fields.Highlights}</strong>
+              </Card.Subtitle>
+              <Card.Text>{detail.fields.Itinerary}</Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
     </>
   );
 }

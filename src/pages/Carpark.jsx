@@ -1,4 +1,4 @@
-export default function CarparkList({ carparkInfo }) {
+export default function Carpark({ carparkInfo }) {
   return (
     <>
       <ul>

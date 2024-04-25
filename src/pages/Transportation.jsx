@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Transportation() {
   return (
     <>
@@ -5,10 +7,10 @@ export default function Transportation() {
       <h5>Getting around Singapore has never been easier!</h5>
       <br />
       <h3>Mode of Transport</h3>
-      <button>Train</button>
-      <button>Bus</button>
+      <button><Link to="/transport/train">Train</Link></button>
+      <button><Link to="/transport/bus">Bus</Link></button>
       <button>Taxi</button>
-      <button>Car</button>
+      <button><Link to="/transport/car">Car</Link></button>
     </>
   );
 }
