@@ -14,7 +14,7 @@ export default function Bus() {
       const data = await response.json();
       const extractedBusStops = Object.keys(data).map((stopNumber) => ({
         stopNumber,
-        name: data[stopNumber][2], // Assuming the name is at index 2 of the details array
+        name: data[stopNumber][2],
       }));
       setBusStops(extractedBusStops);
     };
@@ -39,6 +39,20 @@ export default function Bus() {
     setSelected(event.target.value);
   };
 
+  const sortByArrivalTime = () => {
+    const sortedDetails = [...details].sort(function (a, b) {
+      return a.next.duration_ms - b.next.duration_ms;
+    });
+    setDetails(sortedDetails);
+  };
+
+  const sortByBusNumber = () => {
+    const sortedDetails = [...details].sort(function (a, b) {
+      return a.no - b.no;
+    });
+    setDetails(sortedDetails);
+  };
+
   return (
     <>
       <h1>Bus Arrival</h1>
@@ -48,6 +62,8 @@ export default function Bus() {
           <option>{`${stop.name} - ${stop.stopNumber}`}</option>
         ))}
       </select>
+      <button onClick={sortByArrivalTime}>Sort Arrival</button>
+      <button onClick={sortByBusNumber}>Sort Bus Number</button>
       <BusArrival details={details} />
     </>
   );
