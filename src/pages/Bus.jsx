@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BusArrival from "../components/BusArrival";
 import ReactSelect from "react-select";
+import BusButtons from "../components/BusButtons";
 
 export default function Bus() {
   const [busStops, setBusStops] = useState([]);
@@ -42,24 +43,6 @@ export default function Bus() {
     setSelected(selected);
   };
 
-  const sortByArrivalTime = () => {
-    const sortedDetails = [...details].sort(function (a, b) {
-      return a.next.duration_ms - b.next.duration_ms;
-    });
-    setDetails(sortedDetails);
-  };
-
-  const sortByBusNumber = () => {
-    const sortedDetails = [...details].sort(function (a, b) {
-      return a.no - b.no;
-    });
-    setDetails(sortedDetails);
-  };
-
-  const handleRefresh = () => {
-    fetchDetails();
-  };
-
   const handleInputChange = (inputValue) => {
     setSearchValue(inputValue);
   };
@@ -79,9 +62,11 @@ export default function Bus() {
           label: `${stop.name} - ${stop.stopNumber}`,
         }))}
       />
-      <button onClick={sortByArrivalTime}>Sort Arrival</button>
-      <button onClick={sortByBusNumber}>Sort Bus Number</button>
-      <button onClick={handleRefresh}>Refresh List</button>
+      <BusButtons
+        details={details}
+        setDetails={setDetails}
+        fetchDetails={fetchDetails}
+      />
       <BusArrival details={details} />
     </>
   );
