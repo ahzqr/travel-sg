@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BusArrival from "../components/BusArrival";
 
 export default function Bus() {
   const [busStops, setBusStops] = useState([]);
@@ -47,14 +48,7 @@ export default function Bus() {
           <option>{`${stop.name} - ${stop.stopNumber}`}</option>
         ))}
       </select>
-      {details.map((detail) => (
-        <div>
-          <p>
-            Bus Number: <strong>{detail.no}</strong>, Arriving:{" "}
-            <strong>{Math.floor(detail.next.duration_ms / 60000)} min</strong>
-          </p>
-        </div>
-      ))}
+      <BusArrival details={details} />
     </>
   );
 }
