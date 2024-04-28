@@ -9,7 +9,7 @@ export default function Bus() {
   const [details, setDetails] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
-  useEffect(() => {
+  useEffect(() => { //* Fetches Busstop Number only
     const fetchBusStop = async () => {
       const response = await fetch(
         "https://data.busrouter.sg/v1/stops.min.json"
@@ -24,7 +24,7 @@ export default function Bus() {
     fetchBusStop();
   }, []);
 
-  const fetchDetails = async () => {
+  const fetchDetails = async () => { //* Fetches Bus at the Busstop Number
     if (selected) {
       const selectedNo = selected.value.split("-")[1].trim();
       const response = await fetch(
