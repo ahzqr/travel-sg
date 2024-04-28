@@ -1,4 +1,8 @@
-export default function CarparkButtons({ carparkInfo, setFilteredCarpark }) {
+export default function CarparkButtons({
+  carparkInfo,
+  setFilteredCarpark,
+  fetchCarparkInfo,
+}) {
   const handleFilterCar = () => {
     const filteredCarpark = carparkInfo
       .filter((carpark) =>
@@ -42,12 +46,17 @@ export default function CarparkButtons({ carparkInfo, setFilteredCarpark }) {
     }));
     setFilteredCarpark(unfilteredCarpark);
   };
+
+  const handleRefresh = () => {
+    fetchCarparkInfo();
+  };
   return (
     <>
       <button onClick={handleFilterCar}>Cars</button>
       <button onClick={handleFilterMotor}>Motorcycles</button>
       <button onClick={handleFilterHeavyVehicle}>Heavy Vehicles</button>
       <button onClick={handleReset}>Reset Filter</button>
+      <button onClick={handleRefresh}>Refresh</button>
     </>
   );
 }

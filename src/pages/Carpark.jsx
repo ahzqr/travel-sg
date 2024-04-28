@@ -28,16 +28,21 @@ export default function Carpark() {
       <CarparkButtons
         carparkInfo={carparkInfo}
         setFilteredCarpark={setFilteredCarpark}
+        fetchCarparkInfo={fetchCarparkInfo}
       />
       <ReactSelect
         value={selected}
         isSearchable
         placeholder="Search for carparks.."
         onChange={handleChange}
-        options={filteredCarpark.length > 0 ? filteredCarpark: carparkInfo.map((carpark) => ({
-          value: `${carpark.carpark_number}`,
-          label: `${carpark.carpark_number}`,
-        }))}
+        options={
+          filteredCarpark.length > 0
+            ? filteredCarpark
+            : carparkInfo.map((carpark) => ({
+                value: `${carpark.carpark_number}`,
+                label: `${carpark.carpark_number}`,
+              }))
+        }
       />
       <CarparkAvailibility selected={selected} carparkInfo={carparkInfo} />
     </>
