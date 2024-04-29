@@ -1,4 +1,4 @@
-# Creating a Travel SG Web
+# Travel SG Web
 
 ## Project Brief
 **MVP - Minimum Viable Product** 
@@ -45,7 +45,7 @@ The game is deployed on Vercel: https://travelsg.vercel.app/
 
 ## Ideation Sketch
 
-![Wireframe](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Project%201%20Tetris%20Plan-2.jpg?raw=true)
+![Wireframe](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
 
 <br>
 
@@ -76,26 +76,26 @@ Below is a breakdown and analysis of some of the codes which I have categorised 
 ### Routing
 Routing to the necessary pages.
 
-![Routing](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Conditionals.png?raw=true)
+![Routing](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Routing.png)
 
 ### UseState
 To update the state of the information that we are seeking.
 
-![UseState](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Arrays.png?raw=true)
+![UseState](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/useState.png)
 
 ### Fetch & UseEffect
 Fetching APIs to retrieve information.
 
-![Fetch](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Functions,%20Scope.png?raw=true)
+![Fetch](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Fetch%20API.png)
 
 ### Passing Props
 
-![Fetching in Carpark](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Pseudocode(1).png?raw=true)
-![Passing Props to CarparkButtons](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Pseudocode(2).png?raw=true)
+![Fetching in Carpark & Defining Props](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Define%20Prop.png)
+![Passing Props to CarparkButtons](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Pass%20Props.png)
 
 ### POST to Airtable
 
-![Community POST](https://github.com/chrysaliswoon/CatrisProject/blob/main/Notes%20&%20Resources/Callbacks(1).png?raw=true)
+![Community POST](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/POST.png)
 
 <br>
 
