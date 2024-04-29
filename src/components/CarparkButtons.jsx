@@ -51,12 +51,12 @@ export default function CarparkButtons({
     fetchCarparkInfo();
   };
   return (
-    <>
-      <button onClick={handleFilterCar}>Cars</button>
-      <button onClick={handleFilterMotor}>Motorcycles</button>
-      <button onClick={handleFilterHeavyVehicle}>Heavy Vehicles</button>
-      <button onClick={handleReset}>Reset Filter</button>
-      <button onClick={handleRefresh}>Refresh</button>
-    </>
+    <div className="buttons has-addons is-centered">
+      <button className="button is-danger" onClick={handleFilterCar}>Cars</button>
+      <button className="button is-danger" onClick={handleFilterMotor}>Motorcycles</button>
+      <button className="button is-danger" onClick={handleFilterHeavyVehicle}>Heavy Vehicles</button>
+      <button className="button is-danger" onClick={handleReset}>Reset Filter</button>
+      <button className="button is-danger" onClick={handleRefresh}>Refresh</button>
+    </div>
   );
 }

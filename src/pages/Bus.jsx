@@ -48,8 +48,9 @@ export default function Bus() {
   };
 
   return (
-    <>
-      <h1>Bus Arrival</h1>
+    <div className="has-text-centered">
+      <br/>
+      <h1 className="title is-1">Bus Arrival</h1>
       <ReactSelect
         value={selected}
         menuIsOpen={!!searchValue} //* ChatGPT to open menu only after typing
@@ -68,6 +69,6 @@ export default function Bus() {
         fetchDetails={fetchDetails}
       />
       <BusArrival details={details} />
-    </>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 
 export default function Communal() {
   const [table, setTable] = useState([]);
@@ -91,56 +90,85 @@ export default function Communal() {
 
   return (
     <>
-      <h1 className="communal-header">Share your Singapore Experience!</h1>
-      <hr/>
-      <form className="form-container" onSubmit={handleClick}>
-        <label className="form-label">
-          Name:
-          <input className="form-input"
-            type="text"
-            name="Name"
-            value={comment.Name}
-            onChange={handleChange}
-          />
-        </label>
+      <div className="has-text-centered">
         <br />
-        <label className="form-label">
-          Trip Highlights:
-          <input className="form-input"
-            type="text"
-            name="Highlights"
-            value={comment.Highlights}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label className="form-label">
-          Itinerary:
-          <textarea className="form-textarea"
-            type="text"
-            name="Itinerary"
-            value={comment.Itinerary}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <input className="form-submit" type="submit" value="Share!" />
-      </form>
-      <hr />
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
-        {table.map((detail, index) => (
-          <Card key={index} style={{ width: "30rem" }}>
-            <Card.Body>
-              <Card.Title>
-                {detail.fields.Name} ({detail.fields.Created})
-              </Card.Title>
-              <Card.Subtitle>
-                <strong>{detail.fields.Highlights}</strong>
-              </Card.Subtitle>
-              <Card.Text>{detail.fields.Itinerary}</Card.Text>
-            </Card.Body>
-          </Card>
-        ))}
+        <h1 className="title is-1">Share your Singapore Experience!</h1>
+        <hr />
+        <form className="field control" onSubmit={handleClick}>
+          <label className="label">
+            Name:
+            <input
+              className="input"
+              type="text"
+              name="Name"
+              value={comment.Name}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <br />
+          <label className="label">
+            Trip Highlights:
+            <input
+              className="input"
+              type="text"
+              name="Highlights"
+              value={comment.Highlights}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <br />
+          <label className="label">
+            Itinerary:
+            <textarea
+              className="textarea is-info"
+              type="text"
+              name="Itinerary"
+              value={comment.Itinerary}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <br />
+          <input className="form-submit" type="submit" value="Share!" />
+        </form>
+        <hr />
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+          }}
+        >
+          {table.map((detail, index) => (
+            <div className="card" key={index} style={{ width: "30%", marginBottom: "20px" }}>
+              <div className="card-image">
+                {/* <figure className="image is-4by3">
+                  <img
+                    src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                    alt="Placeholder image"
+                  />
+                </figure> */}
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4">{detail.fields.Name}</p>
+                    <p className="subtitle is-6">{detail.fields.Highlights}</p>
+                  </div>
+                </div>
+
+                <div className="content" style={{ height: "100%", overflow: "hidden" }}>
+                {detail.fields.Itinerary}
+                  <br />
+                  <time dateTime="2016-1-1">{detail.fields.Created}</time>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

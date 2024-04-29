@@ -24,7 +24,9 @@ export default function Carpark() {
   };
 
   return (
-    <>
+    <div className="has-text-centered">
+    <br/>
+    <h1 className="title is-1">Carpark Availability</h1>
       <CarparkButtons
         carparkInfo={carparkInfo}
         setFilteredCarpark={setFilteredCarpark}
@@ -45,6 +47,6 @@ export default function Carpark() {
         }
       />
       <CarparkAvailibility selected={selected} carparkInfo={carparkInfo} />
-    </>
+    </div>
   );
 }

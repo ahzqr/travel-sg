@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import Communal from "./pages/Communal";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./pages/app.css";
 import MainPage from "./pages/MainPage";
 import Transportation from "./pages/Transportation";
 import Train from "./pages/Train";
 import Carpark from "./pages/Carpark";
 import Bus from "./pages/Bus";
 import NavBar from "./components/NavBar";
+import "bulma/css/bulma.min.css";
+import "./pages/app.css"
 
 
 export default function App() {
   return (
     <>
-    <NavBar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/community" element={<Communal />} />

@@ -6,6 +6,7 @@ export default function CarparkAvailibility({ selected, carparkInfo }) {
     <>
       {selectedCarparkInfo.map((carpark) => (
         <div key={carpark.carpark_number}>
+            <br/>
           <p>
             <strong>Last Updated: </strong> {carpark.update_datetime}
           </p>

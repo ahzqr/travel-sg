@@ -18,9 +18,18 @@ export default function BusButtons({ details, setDetails, fetchDetails }) {
   };
   return (
     <>
-      <button onClick={sortByArrivalTime}>Sort Arrival</button>
-      <button onClick={sortByBusNumber}>Sort Bus Number</button>
-      <button onClick={handleRefresh}>Refresh List</button>
+      <br />
+      <div className="buttons has-addons is-centered">
+        <button className="button is-danger" onClick={sortByArrivalTime}>
+          Sort Arrival
+        </button>
+        <button className="button is-danger" onClick={sortByBusNumber}>
+          Sort Bus Number
+        </button>
+        <button className="button is-danger" onClick={handleRefresh}>
+          Refresh List
+        </button>
+      </div>
     </>
   );
 }
