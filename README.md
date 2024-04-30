@@ -49,6 +49,19 @@ The game is deployed on Vercel: https://travelsg.vercel.app/
 
 <br>
 
+## API
+
+1. Bus Stop API: (https://data.busrouter.sg/v1/stops.min.json)
+![Bus Stop](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
+
+2. Bus Arrival API: (https://arrivelah2.busrouter.sg/?id={bus.id})
+![Bus Arrival](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
+
+3. Carpark API: (https://api.data.gov.sg/v1/transport/carpark-availability)
+![Carpark Availability](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
+
+<br>
+
 ## Approach to Development
 Using the plan and pseudocodes, I broke down the project into stages:
 - [x] **Step 1:** Search for relevant APIs
