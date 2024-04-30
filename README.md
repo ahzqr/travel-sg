@@ -52,13 +52,13 @@ The game is deployed on Vercel: https://travelsg.vercel.app/
 ## API
 
 1. Bus Stop API: (https://data.busrouter.sg/v1/stops.min.json)
-![Bus Stop](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
+![Bus Stop](https://github.com/ahzqr/travel-sg/blob/a8d68ae84c383749b452ad7185c1386ae20e9400/public/Bus%20Stop%20API.png)
 
 2. Bus Arrival API: (https://arrivelah2.busrouter.sg/?id={bus.id})
-![Bus Arrival](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
+![Bus Arrival](https://github.com/ahzqr/travel-sg/blob/a8d68ae84c383749b452ad7185c1386ae20e9400/public/Bus%20Arrival%20API.png)
 
 3. Carpark API: (https://api.data.gov.sg/v1/transport/carpark-availability)
-![Carpark Availability](https://github.com/ahzqr/travel-sg/blob/6452ca799d40e4b514c2b7cf7511f45f8cc157a2/public/Wireframe.png)
+![Carpark Availability](https://github.com/ahzqr/travel-sg/blob/a8d68ae84c383749b452ad7185c1386ae20e9400/public/Carpark%20Availability%20API.png)
 
 <br>
 
